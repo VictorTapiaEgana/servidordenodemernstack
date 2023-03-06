@@ -24,3 +24,6 @@ app.use('/api/task',require('../server/routes/task.routes'));
 app.listen(port,()=>{
     console.log(`Servidor en Puerto ${ port }`) ;
 });
+
+console.log(`Servidor en Puerto ${ port }`) ;
+
