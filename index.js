@@ -18,6 +18,10 @@ app.use(cors());
 
 
 //routes
+app.get("/mensaje", (req, res) => {
+    res.send("Hello");
+});
+
 app.use('/api/task',require('./routes/task.routes'));
 
 //Static Files
