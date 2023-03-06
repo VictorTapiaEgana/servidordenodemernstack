@@ -18,15 +18,17 @@ app.use(cors());
 
 
 //routes
-app.get("/mensaje", (req, res) => {
-    res.send("Hello");
-});
+// app.get("/mensaje", (req, res) => {
+//     res.send("Hello");
+// });
 
-app.use('/api/task',require('./routes/task.routes'));
+// app.use('/api/task',require('./routes/task.routes'));
+
+app.use(require('./routes/task.routes'));
 
 //Static Files
- app.use(express.static(path.join(__dirname, '..')));
- console.log(path.join(__dirname, '..'));   //BORRAR
+//  app.use(express.static(path.join(__dirname, '..')));
+//  console.log(path.join(__dirname, '..'));   //BORRAR
 
 //Starting Server
 app.listen(port,()=>{
