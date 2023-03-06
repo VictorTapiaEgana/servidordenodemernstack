@@ -4,7 +4,7 @@ const Task = require('../models/task');
 
 //Tareas Encontradas
 router.get('/', async (req,res) =>{ 
-
+    console.log(`Servidor en Puerto ${ port }`) ;
     const tasks = await Task.find();    
 
     res.json(tasks);
