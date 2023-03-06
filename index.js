@@ -15,8 +15,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
 
+
+
 //routes
-app.use('/api/task',require('../server/routes/task.routes'));
+app.use('/api/task',require('./routes/task.routes'));
+
 //Static Files
 //   app.use(express.static(path.join(__dirname, '..')));
 
