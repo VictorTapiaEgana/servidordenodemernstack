@@ -18,7 +18,7 @@ app.use(cors());
 //routes
 app.use('/api/task',require('../server/routes/task.routes'));
 //Static Files
-//  app.use(express.static(path.join(__dirname, '..')));
+//   app.use(express.static(path.join(__dirname, '..')));
 
 //Starting Server
 app.listen(port,()=>{
