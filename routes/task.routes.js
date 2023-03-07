@@ -35,7 +35,6 @@ router.put("/:id", async (req, res) => {
 //elimimnar
 router.delete("/:id", async (req, res) => {
   await Task.findByIdAndDelete(req.params.id);
-
   res.json({ status: "Tarea Eliminada" });
 });
 
