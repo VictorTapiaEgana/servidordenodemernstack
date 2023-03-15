@@ -8,7 +8,7 @@ const User = require("../models/users");
 /****************************************/  
 
 //Buscar Usuario
-router.get("/users", async (req, res) => {  
+router.post("/users", async (req, res) => {  
    const {name , password } = req.body;
    
    if (name !== undefined){
