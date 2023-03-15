@@ -6,6 +6,18 @@ const User = require("../models/users");
 /****************************************/
 /*            USUARIOS LOLFLIX          */
 /****************************************/  
+//listar
+//Tareas Encontradas
+router.get("/users", async (req, res) => {  
+  const users = await User.find();
+  res.json(users);
+});
+
+// {
+  // "name":"vitor",
+  // "password":"tapia"
+// }
+
 
 //Buscar Usuario
 router.post("/users", async (req, res) => {  
