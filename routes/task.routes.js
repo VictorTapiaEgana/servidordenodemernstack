@@ -25,17 +25,17 @@ router.post("/users", async (req, res) => {
    
    if (name !== undefined){
       if (name.trim() === ""){    
-         res.json({status:"Usuario en Blanco"})
+         res.json("Usuario en Blanco")
       }else{    
         const usuario = await User.findOne({name});
            if (usuario !== null){              
               if (password === usuario.password){
                   res.status(200).json("Usuario Valido");
               }else{
-                  res.status(401).json("Error de contraseña")
+                  res.status(401).json("Contraseña incorrecta")
               }                
             }else{
-                res.status(404).json({status:"Usuario No Encontrado"}) 
+                res.status(404).json("Usuario no encontrado, revise sus datos") 
             }    
       }     
    }else{
