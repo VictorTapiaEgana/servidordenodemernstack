@@ -19,7 +19,3 @@ app.use("/api/task", require("./routes/task.routes"));
 app.listen(port, () => {
   console.log(`Servidor en Puerto ${port}`);
 });
-
-//Static Files
-//  app.use(express.static(path.join(__dirname, '..')));
-//  console.log(path.join(__dirname, '..'));   //BORRAR
